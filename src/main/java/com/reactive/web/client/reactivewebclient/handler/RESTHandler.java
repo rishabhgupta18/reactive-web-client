@@ -11,10 +11,6 @@ public class RESTHandler implements IRESTHandler {
 
     private WebClient webClient;
 
-    public RESTHandler() {
-        this.webClient = WebClient.create();
-    }
-
     public RESTHandler(String baseUrl) {
         this.webClient = WebClient.create(baseUrl);
     }
@@ -57,10 +53,6 @@ public class RESTHandler implements IRESTHandler {
 
         RESTHandler restHandler;
 
-        public Retrieve() {
-            restHandler = new RESTHandler();
-        }
-
         public Retrieve(String baseUrl) {
             restHandler = new RESTHandler(baseUrl);
         }
@@ -88,10 +80,6 @@ public class RESTHandler implements IRESTHandler {
     class Exchange {
 
         RESTHandler restHandler;
-
-        public Exchange() {
-            restHandler = new RESTHandler();
-        }
 
         public Exchange(String baseUrl) {
             restHandler = new RESTHandler(baseUrl);
